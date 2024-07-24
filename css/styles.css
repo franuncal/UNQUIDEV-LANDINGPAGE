@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@font-face {
+  font-family: "akatab";
+  src: url("Akatab.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background-color: rgba(245, 241, 240);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Aboreto", sans-serif;
+}
+
+p {
+  font-family: "akatab", sans-serif;
+}
+
+.container {
+  max-width: 1360px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  font-family: "akatab", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #110f10;
+}
+
+.logo {
+  max-width: 5rem;
+  border-radius: 50%;
+  margin-right: 5rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #f5f1f0;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+/* Banner Inicio */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/img-fondos/fondo01.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner h1 {
+  text-align: start;
+  font-size: 3.9em;
+  margin: 0 0 20px;
+}
+
+.banner p {
+  font-family: "akatab", sans-serif;
+  text-align: start;
+  font-size: 2.4em;
+  margin: 0 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #cef196; /* Color del botón */
+  color: #110f10;
+  text-decoration: none;
+  font-family: "akatab", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 7px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #b1ee4e;
+  transform: scale(1.05);
+}
+
+/* Nosotros */
+.nosotros {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.nosotros .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px; /* Espacio entre el texto y la imagen */
+}
+
+.nosotros .image,
+.nosotros .text {
+  flex: 1; /* Ocupan el mismo espacio */
+}
+
+.nosotros .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.nosotros .text {
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+
+.nosotros .text h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.nosotros .text p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn-cta2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+/* Estilos para las tarjetas */
+.card-content {
+  padding: 50px 20px;
+  background-color: #110f10; /* Fondo neutro */
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #f5f1f0; /* Color del título */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-item {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-item img {
+  width: 100%; /* Tamaño de las imágenes */
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.card-item h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333; /* Color del título de cada tarjeta */
+}
+
+.card-item p {
+  font-size: 1em;
+  color: #555; /* Color del texto */
+  line-height: 1.6;
+}
+
+/* Servicios */
+.services {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.services .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #baec68;
+}
+
+.service-card:hover {
+  /* transform: translateY(-10px); */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
+  border: 1px solid #110f10;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Estilos generales para la sección de contacto */
+.contacto {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-form,
+.contact-text {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.contact-form h2,
+.contact-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group button {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #110f10;
+  background-color: #cef196;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: #b1ee4e;
+}
+
+/* Estilos para el texto de contacto */
+.contact-text h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.contact-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #cef196;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #cef196; /* Color de hover */
+}
+
+@media (max-width: 768px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    color: #ececec;
+  }
+
+  .cerrar-menu {
+    color: #ececec;
+  }
+
+  header {
+    padding: 25px;
+    gap: 6rem;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 1;
+    background-color: #110f10;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #f5f1f0;
+  }
+
+  .banner h1 {
+    font-size: 2.5em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+
+  .nosotros {
+    padding: 40px 10px; /* Reduce el padding */
+  }
+
+  .nosotros .container {
+    flex-direction: column; /* Apila los elementos en columna */
+    gap: 40px; /* Reduce el espacio entre elementos */
+  }
+
+  .nosotros .text {
+    padding: 20px 10px; /* Reduce el padding */
+  }
+
+  .nosotros .text h2 {
+    font-size: 24px; /* Reduce el tamaño del texto */
+  }
+
+  .nosotros .text p {
+    font-size: 14px; /* Reduce el tamaño del texto */
+  }
+
+  .nosotros .image img {
+    display: none;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-text {
+    margin-bottom: 20px;
+  }
+}

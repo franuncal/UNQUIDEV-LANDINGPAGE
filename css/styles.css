@@ -45,7 +45,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   background-color: #110f10;
 }
 
@@ -65,6 +65,7 @@ header {
   text-decoration: none;
   color: #f5f1f0;
 }
+
 
 .abrir-menu,
 .cerrar-menu {
@@ -297,7 +298,7 @@ header {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -346,7 +347,6 @@ header {
 }
 
 .form-group button {
-  text-align: center;
   display: inline-block;
   padding: 10px 20px;
   font-size: 1em;
@@ -360,19 +360,6 @@ header {
 
 .form-group button:hover {
   background-color: #b1ee4e;
-}
-
-/* Estilos para el texto de contacto */
-.contact-text h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.contact-text p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #555;
 }
 
 /* Footer */

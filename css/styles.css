@@ -66,7 +66,6 @@ header {
   color: #f5f1f0;
 }
 
-
 .abrir-menu,
 .cerrar-menu {
   display: none;
@@ -251,6 +250,7 @@ header {
 }
 
 .service-cards {
+  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -270,7 +270,7 @@ header {
 .icon {
   font-size: 2.2em;
   margin-bottom: 20px;
-  color: #baec68;
+  color: #cef196;
 }
 
 .service-card:hover {
@@ -293,13 +293,17 @@ header {
 
 /* Estilos generales para la sección de contacto */
 .contacto {
-  padding: 50px 20px;
   background-color: #f9f9f9;
+  padding: 80px 20px;
 }
 
-.container {
+.contacto .container {
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }
 
 .contact-content {
@@ -308,8 +312,7 @@ header {
   gap: 20px;
 }
 
-.contact-form,
-.contact-text {
+.contact-form {
   flex: 1;
   min-width: 300px;
   background-color: #ffffff;
@@ -318,12 +321,31 @@ header {
   padding: 20px;
 }
 
-.contact-form h2,
+.contact-text {
+  flex: 1;
+  min-width: 300px;
+  background-color: #cef196;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .contact-text h2 {
   font-size: 2em;
   margin-bottom: 20px;
   color: #333;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
   text-align: center;
+}
+
+.contact-text p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .form-group {
@@ -331,6 +353,7 @@ header {
 }
 
 .form-group label {
+  font-family: "akatab", sans-serif;
   display: block;
   font-size: 1em;
   margin-bottom: 5px;
@@ -347,9 +370,10 @@ header {
 }
 
 .form-group button {
+  font-family: "akatab", sans-serif;
   display: inline-block;
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 1rem;
   color: #110f10;
   background-color: #cef196;
   border: none;
@@ -360,6 +384,11 @@ header {
 
 .form-group button:hover {
   background-color: #b1ee4e;
+}
+
+.form-group-button {
+  display: flex;
+  justify-content: center;
 }
 
 /* Footer */
@@ -415,6 +444,7 @@ header {
   }
 
   header {
+    position: fixed;
     padding: 25px;
     gap: 6rem;
   }
@@ -430,9 +460,10 @@ header {
     top: 0;
     right: 0;
     bottom: 1;
-    background-color: #110f10;
     padding: 2rem;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+    background-color: #110f10;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .nav.visible {
@@ -470,6 +501,10 @@ header {
     padding: 20px 10px; /* Reduce el padding */
   }
 
+  .nosotros .vm-text {
+    display: none;
+  }
+
   .nosotros .text h2 {
     font-size: 24px; /* Reduce el tamaño del texto */
   }
@@ -479,6 +514,10 @@ header {
   }
 
   .nosotros .image img {
+    display: none;
+  }
+
+  .card-item p {
     display: none;
   }
 

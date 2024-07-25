@@ -8,17 +8,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="shortcut icon"
       href="/img/favicon/favicon2.png"
       type="image/x-icon"
     />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <img class="logo" src="/img/logos/logor4.png" alt="" />
+      <img class="logo" src="/img/logos/logor4.png" alt="logo" />
       <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
       <nav class="nav" id="nav">
         <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
@@ -42,7 +47,12 @@
     </section>
 
     <!-- Nosotros -->
-    <section class="nosotros" id="nosotros">
+    <section
+      class="nosotros"
+      id="nosotros"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container">
         <div class="text">
           <h2>Nosotros</h2>
@@ -54,7 +64,7 @@
             efectivas que transformen tus ideas en realidades digitales.
           </p>
           <br />
-          <p>
+          <p class="vm-text">
             Nos distingue nuestra dedicación a la excelencia y enfoque
             personalizado. Trabajamos de cerca contigo para entender tus
             necesidades y objetivos, ofreciendo soluciones que superen tus
@@ -62,7 +72,7 @@
             negocio hacia el éxito.
           </p>
         </div>
-        <div class="image">
+        <div class="image" data-aos="fade-left">
           <img
             src="/img/img-fondos/fondo07.png"
             alt="Descripción de la imagen"
@@ -95,8 +105,7 @@
           <img src="/img/vectoreds/tienda03.png" alt="Diseño 2" />
           <h3>Tiendas Online</h3>
           <p>
-            Desarrollamos tiendas online irresistibles y eficientes que
-            maximizan tus ventas y fortalecen tu marca digital.
+            Desarrollamos tiendas online atractivas para maximizar tus ventas y fortalecer tu marca digital.
           </p>
         </div>
       </div>
@@ -105,8 +114,13 @@
       </div>
     </section>
 
-    <!-- Servicios -->
-    <section class="services" id="card">
+    <!-- Funcionalidades-->
+    <section
+      class="services"
+      id="card"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container">
         <div class="service-cards">
           <div class="service-card">
@@ -144,8 +158,15 @@
       </div>
     </section>
 
+    <!-- Formulario de Contacto -->
     <section class="contacto" id="contacto">
       <div class="container">
+        <div class="contact-text">
+          <!-- <i class="bi bi-phone-vibrate"></i> -->
+          <p>Hablemos</p>
+          <h2>Trabajamos Juntos?</h2>
+          <p>Contáctanos para saber como podemos ayudarte a alcanzar tus objetivos o desarrollar ese proyecto especial.</p>
+        </div>
         <div class="contact-form">
           <h2>Contacto</h2>
           <form action="https://example.com/submit" method="post">
@@ -161,7 +182,7 @@
               <label for="message">Mensaje</label>
               <textarea id="message" name="message" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group form-group-button">
               <button type="submit">Enviar</button>
             </div>
           </form>
@@ -188,5 +209,8 @@
     </footer>
 
     <script src="js/scripts.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

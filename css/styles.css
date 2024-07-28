@@ -198,22 +198,22 @@ header {
   background-color: #ffffff; /* Fondo blanco para las tarjetas */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 5px;
   width: 100%;
   max-width: 300px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.30s;
 }
 
 .card-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-item img {
   width: 100%; /* Tamaño de las imágenes */
   height: auto;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-bottom: 15px;
 }
 

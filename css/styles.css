@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   line-height: 1.6;
   background-color: rgba(245, 241, 240);
 }
@@ -32,8 +33,8 @@ p {
 }
 
 .container {
-  max-width: 1360px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -202,7 +203,7 @@ header {
   width: 100%;
   max-width: 300px;
   text-align: center;
-  transition: all 0.30s;
+  transition: all 0.3s;
 }
 
 .card-item:hover {
@@ -351,53 +352,52 @@ header {
 
 .form-group {
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .form-group label {
   font-family: "akatab", sans-serif;
   display: block;
-  font-size: 1em;
-  margin-bottom: 5px;
+  font-size: 1.2em;
   color: #555;
+  margin-bottom: 8px;
 }
 
-.form-group input {
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
   width: 100%;
   padding: 10px;
-  font-size: 1em;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.form-group textarea {
-  width: 100%;
-  padding: 50px;
-  font-size: 1em;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+textarea {
+  height: 100px;
 }
 
-.form-group button {
-  font-family: "akatab", sans-serif;
+button[type="submit"] {
+  align-self: center;
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #110f10;
   background-color: #cef196;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.form-group button:hover {
+button[type="submit"]:hover {
   background-color: #b1ee4e;
 }
 
-.form-group-button {
-  display: flex;
-  justify-content: center;
-}
 
 .social-icons-c a {
   display: inline-block;
@@ -442,6 +442,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
   .abrir-menu,
   .cerrar-menu {
     display: block;
@@ -505,16 +509,12 @@ header {
   }
 
   .nosotros {
-    padding: 40px 10px; /* Reduce el padding */
+    padding: 40px 10px;
   }
 
   .nosotros .container {
-    flex-direction: column; /* Apila los elementos en columna */
-    gap: 40px; /* Reduce el espacio entre elementos */
-  }
-
-  .nosotros .text {
-    padding: 20px 10px; /* Reduce el padding */
+    flex-direction: column;
+    gap: 40px;
   }
 
   .nosotros .vm-text {
@@ -522,11 +522,11 @@ header {
   }
 
   .nosotros .text h2 {
-    font-size: 24px; /* Reduce el tamaño del texto */
+    font-size: 28px;
   }
 
   .nosotros .text p {
-    font-size: 14px; /* Reduce el tamaño del texto */
+    font-size: 16px;
   }
 
   .nosotros .image img {

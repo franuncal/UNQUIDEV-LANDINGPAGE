@@ -176,16 +176,16 @@ header {
 }
 
 /* Estilos para las tarjetas */
-.card-content {
+/* .card-content {
   padding: 50px 20px;
-  background-color: #110f10; /* Fondo neutro */
+  background-color: #110f10; 
   text-align: center;
 }
 
 .card-content h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #f5f1f0; /* Color del título */
+  color: #f5f1f0; 
 }
 
 .container {
@@ -196,7 +196,7 @@ header {
 }
 
 .card-item {
-  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  background-color: #ffffff; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 5px;
@@ -212,7 +212,7 @@ header {
 }
 
 .card-item img {
-  width: 100%; /* Tamaño de las imágenes */
+  width: 100%; 
   height: auto;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -221,22 +221,106 @@ header {
 .card-item h3 {
   font-size: 1.8em;
   margin-bottom: 15px;
-  color: #333; /* Color del título de cada tarjeta */
+  color: #333; 
 }
 
 .card-item p {
   font-size: 1em;
-  color: #555; /* Color del texto */
+  color: #555; 
   line-height: 1.6;
+} */
+
+/* Servicios Section */
+.services-section {
+  background-color: #110f10;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Servicios */
-.services {
-  background-color: #f9f9f9;
+.service-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.service-text {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+}
+
+.service-text h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background-color: #cef196;
+  border-radius: 2px;
+}
+
+.service-text p {
+  background-color: #f0f4f8;
+  border-left: 4px solid #cef196;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  flex: 0 0 auto;
+  max-width: 300px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background-color: #cef196;
+  color: #110f10;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-size: 1.6rem;
+}
+
+.cta-button:hover {
+  background-color: #b1ee4e;
+}
+
+/* Funcionalidades Section */
+.features-section {
   padding: 60px 20px;
+  background-color: #f9f9f9;
 }
 
-.services .container {
+.features-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,52 +329,53 @@ header {
   text-align: center;
 }
 
-.services h2 {
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
+.features-container h2 {
+  font-size: 2.5rem;
+  color: #110f10;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
-.service-cards {
-  cursor: pointer;
+.features-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
-.service-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+.feature-box {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.icon {
-  font-size: 2.2em;
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: #cef196;
+}
+
+.feature-icon {
+  font-size: 3rem;
   margin-bottom: 20px;
   color: #cef196;
 }
 
-.service-card:hover {
-  /* transform: translateY(-10px); */
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
-  border: 1px solid #110f10;
+.feature-box h3 {
+  font-size: 1.8rem;
+  color: #110f10;
+  margin-bottom: 15px;
 }
 
-.service-card h3 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.5;
+.feature-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 /* Estilos generales para la sección de contacto */
@@ -397,7 +482,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #b1ee4e;
 }
-
 
 .social-icons-c a {
   display: inline-block;

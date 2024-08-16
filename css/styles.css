@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
@@ -42,19 +43,22 @@ p {
 header {
   position: fixed;
   font-family: "akatab", sans-serif;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  background-color: #110f10;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: background 0.3s ease;
   z-index: 1000;
 }
 
 .logo {
-  max-width: 5rem;
+  max-width: 4rem;
   border-radius: 50%;
-  margin-right: 5rem;
+  margin-right: 2rem;
 }
 
 .nav-list {
@@ -64,13 +68,25 @@ header {
 }
 
 .nav-list li a {
+  padding: 0.3rem 0.6rem;
+  margin: 0 auto;
   text-decoration: none;
-  color: #f5f1f0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "akatab", sans-serif;
 }
 
 .abrir-menu,
 .cerrar-menu {
   display: none;
+}
+
+.social-icons-nav a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2em;
+  color: #cef196;
+  transition: color 0.3s;
 }
 
 /* Banner Inicio */
@@ -110,6 +126,7 @@ header {
 .cta-button {
   display: inline-block;
   padding: 10px 20px;
+  margin-top: 2rem;
   background-color: #cef196; /* Color del botón */
   color: #110f10;
   text-decoration: none;
@@ -127,12 +144,14 @@ header {
 
 /* Nosotros */
 .nosotros {
+  transition: background-color 0.3s ease;
   background-color: #f9f9f9;
   padding: 80px 20px;
 }
 
 .nosotros .container {
-  max-width: 1000px;
+  height: 70vh;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -151,11 +170,6 @@ header {
   border-radius: 10px;
 }
 
-.nosotros .text {
-  padding: 60px 20px;
-  border-radius: 20px;
-}
-
 .nosotros .text h2 {
   color: #333;
   font-size: 28px;
@@ -168,92 +182,43 @@ header {
   line-height: 1.5;
 }
 
-.btn-cta2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-}
-
-/* Estilos para las tarjetas */
-/* .card-content {
-  padding: 50px 20px;
-  background-color: #110f10; 
-  text-align: center;
-}
-
-.card-content h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: #f5f1f0; 
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card-item {
-  background-color: #ffffff; 
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-  transition: all 0.3s;
-}
-
-.card-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-item img {
-  width: 100%; 
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.card-item h3 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  color: #333; 
-}
-
-.card-item p {
-  font-size: 1em;
-  color: #555; 
-  line-height: 1.6;
-} */
-
 /* Servicios Section */
 .services-section {
   background-color: #110f10;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
 .service-card {
   display: flex;
   align-items: center;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
   gap: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
 }
 
 .service-text {
   flex: 1;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .service-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
   color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   font-weight: bold;
   position: relative;
 }
@@ -261,7 +226,7 @@ header {
 .service-text h2::before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   left: 0;
   width: 50%;
   height: 4px;
@@ -270,11 +235,12 @@ header {
 }
 
 .service-text p {
-  background-color: #f0f4f8;
+  background-color: #fff;
   border-left: 4px solid #cef196;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
 .service-image {
@@ -286,7 +252,7 @@ header {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -298,16 +264,18 @@ header {
 
 .cta-container {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .cta-button {
   background-color: #cef196;
   color: #110f10;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   text-decoration: none;
-  border-radius: 0.25rem;
-  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -316,8 +284,15 @@ header {
 
 /* Funcionalidades Section */
 .features-section {
-  padding: 60px 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  padding: 2rem;
   background-color: #f9f9f9;
+  margin: 0 auto;
 }
 
 .features-container {
@@ -378,42 +353,39 @@ header {
   line-height: 1.6;
 }
 
-/* Estilos generales para la sección de contacto */
+/* contacto */
 .contacto {
-  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  background-color: #110f10;
   padding: 80px 20px;
 }
 
 .contacto .container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
 }
 
 .contact-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
 }
 
 .contact-text {
-  flex: 1;
+  text-align: center;
+  align-items: center;
   min-width: 300px;
   background-color: #cef196;
   border-radius: 10px;
   padding: 20px;
+}
+
+.contact-text .t1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .contact-text h2 {
@@ -422,79 +394,16 @@ header {
   color: #333;
 }
 
-.contact-form h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
 .contact-text p {
   color: #555;
   font-size: 16px;
   line-height: 1.5;
 }
 
-.form-group {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.form-group label {
-  font-family: "akatab", sans-serif;
-  display: block;
-  font-size: 1.2em;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-textarea {
-  height: 100px;
-}
-
-button[type="submit"] {
-  align-self: center;
-  display: inline-block;
-  background-color: #cef196;
-  color: #333;
-  font-size: 1.2em;
-  font-weight: 500;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #b1ee4e;
-}
-
-.social-icons-c a {
-  display: inline-block;
-  margin: 10px 10px;
-  font-size: 1.5em;
-  color: #110f10;
-  transition: color 0.3s;
-}
-
 /* Footer */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #ececec;
+  color: #110f10;
   padding: 70px 0;
   text-align: center;
 }
@@ -516,13 +425,13 @@ button[type="submit"]:hover {
 .social-icons a {
   display: inline-block;
   margin: 0 10px;
-  font-size: 1.5em;
-  color: #cef196;
+  font-size: 1.6rem;
+  color: #110f10;
   transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #cef196; /* Color de hover */
+  color: #b1ee4e; /* Color de hover */
 }
 
 @media (max-width: 768px) {
@@ -592,41 +501,88 @@ button[type="submit"]:hover {
     font-size: 1em;
   }
 
-  .nosotros {
-    padding: 40px 10px;
+  /* Seccion Nosotros */
+  .nosotros .container {
+    flex-direction: column; /* Coloca el texto e imagen en columnas */
+    height: auto; /* Ajusta la altura automáticamente */
+    gap: 20px; /* Reduce el espacio entre elementos */
   }
 
-  .nosotros .container {
-    flex-direction: column;
-    gap: 40px;
+  .nosotros .image {
+    display: none; /* Oculta la imagen en pantallas pequeñas */
   }
 
   .nosotros .vm-text {
-    display: none;
+    display: none; /* Oculta el texto con la clase vm-text en pantallas pequeñas */
   }
 
   .nosotros .text h2 {
-    font-size: 28px;
+    font-size: 24px; /* Ajusta el tamaño del título */
   }
 
   .nosotros .text p {
-    font-size: 16px;
+    font-size: 14px; /* Ajusta el tamaño del texto */
   }
 
-  .nosotros .image img {
-    display: none;
+  /* Servicios */
+  .service-card {
+    flex-direction: column; /* Coloca la imagen debajo del texto */
+    gap: 1rem; /* Reduce el espacio entre elementos */
+    padding: 1.5rem; /* Reduce el padding en pantallas más pequeñas */
   }
 
-  .card-item p {
-    display: none;
+  .service-text {
+    padding-right: 0; /* Quita el padding lateral */
+    text-align: center; /* Centra el texto */
   }
 
-  .contact-content {
-    flex-direction: column;
+  .service-text h2 {
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
   }
 
-  .contact-form,
-  .contact-text {
-    margin-bottom: 20px;
+  .service-text p {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+    padding: 0.75rem; /* Reduce el padding del párrafo */
+  }
+
+  .service-image {
+    max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  }
+
+  .cta-button {
+    font-size: 1.2rem; /* Ajusta el tamaño del botón de llamada a la acción */
+  }
+
+  /* Seccion Funcionalidades */
+  .features-section {
+    padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  .features-container h2 {
+    font-size: 2rem; /* Reduce el tamaño del título */
+    margin-bottom: 20px; /* Reduce el espacio debajo del título */
+  }
+
+  .features-grid {
+    flex-direction: column; /* Organiza las características en columna */
+    gap: 20px; /* Reduce el espacio entre los elementos */
+  }
+
+  .feature-box {
+    width: 100%; /* Asegura que las cajas ocupen el 100% del ancho disponible */
+    padding: 20px; /* Reduce el padding dentro de las cajas */
+  }
+
+  .feature-box h3 {
+    font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+  }
+
+  .feature-box p {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  }
+
+  .feature-icon {
+    font-size: 2.5rem; /* Ajusta el tamaño del ícono */
+    margin-bottom: 15px; /* Reduce el espacio debajo del ícono */
   }
 }

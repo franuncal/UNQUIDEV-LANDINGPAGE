@@ -106,26 +106,28 @@ header {
 }
 
 .banner-content {
+  max-width: 900px;
   padding: 20px;
   border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .banner h1 {
   text-align: start;
-  font-size: 3.9em;
+  font-size: 3.8rem;
   margin: 0 0 20px;
 }
 
 .banner p {
   font-family: "akatab", sans-serif;
   text-align: start;
-  font-size: 2.4em;
+  font-size: 2.2rem;
   margin: 0 0 20px;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px;
   margin-top: 2rem;
   background-color: #cef196; /* Color del botón */
   color: #110f10;
@@ -134,7 +136,7 @@ header {
   font-size: 1.4rem;
   font-weight: 500;
   border-radius: 7px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
@@ -172,13 +174,13 @@ header {
 
 .nosotros .text h2 {
   color: #333;
-  font-size: 28px;
+  font-size: 2.4rem;
   margin-bottom: 20px;
 }
 
 .nosotros .text p {
   color: #555;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -218,8 +220,7 @@ header {
 .service-text h2 {
   color: #333;
   font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
@@ -237,7 +238,7 @@ header {
 .service-text p {
   background-color: #fff;
   border-left: 4px solid #cef196;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #333;
@@ -366,45 +367,59 @@ header {
 .contacto .container {
   max-width: 800px;
   margin: 0 auto;
-}
-
-.contact-content {
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .contact-text {
   text-align: center;
-  align-items: center;
-  min-width: 300px;
   background-color: #cef196;
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-text .t1 {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
+  color: #333;
 }
 
 .contact-text h2 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
 }
 
 .contact-text p {
   color: #555;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.cta-container {
+  margin-top: 20px;
+}
+
+.cta-button {
+  background-color: #cef196;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b1ee4e;
 }
 
 /* Footer */
 .footer {
   background-color: #ececec;
   color: #110f10;
-  padding: 70px 0;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -414,18 +429,19 @@ header {
 }
 
 .footer p {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
 .social-icons {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #110f10;
   transition: color 0.3s;
 }
@@ -494,11 +510,16 @@ header {
   }
 
   .banner h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 
   .banner p {
-    font-size: 1em;
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
   }
 
   /* Seccion Nosotros */
@@ -584,5 +605,54 @@ header {
   .feature-icon {
     font-size: 2.5rem; /* Ajusta el tamaño del ícono */
     margin-bottom: 15px; /* Reduce el espacio debajo del ícono */
+  }
+
+  /* seccion Contacto */
+  .contacto {
+    padding: 60px 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .contacto .container {
+    max-width: 100%; /* Asegura que ocupe el ancho completo */
+  }
+
+  .contact-text {
+    padding: 20px; /* Reduce el padding */
+    font-size: 1rem;
+  }
+
+  .contact-text h2 {
+    font-size: 1.8em; /* Ajusta el tamaño del título */
+  }
+
+  .contact-text .t1 {
+    font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+  }
+
+  .contact-text p {
+    font-size: 14px; /* Reduce el tamaño del párrafo */
+  }
+
+  .cta-button {
+    font-size: 1rem; /* Ajusta el tamaño del botón */
+    padding: 0.8rem 1.5rem; /* Reduce el padding del botón */
+  }
+
+  /* Footer */
+  .footer-content {
+    padding: 0 20px;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
   }
 }

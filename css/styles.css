@@ -458,7 +458,7 @@ header {
 
   header {
     position: fixed;
-    padding: 25px;
+    padding: 0.7rem 2rem;
     gap: 6rem;
   }
 

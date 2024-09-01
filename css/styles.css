@@ -65,6 +65,7 @@ header {
   list-style-type: none;
   display: flex;
   gap: 2rem;
+  cursor: pointer;
 }
 
 .nav-list li a {
@@ -95,8 +96,8 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/img/img-fondos/fondo01.png");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("/img/img-fondos/wave-haikei.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -108,8 +109,8 @@ header {
 .banner-content {
   max-width: 900px;
   padding: 20px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.5);
+  /* border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5); */
 }
 
 .banner h1 {
@@ -379,6 +380,7 @@ header {
 }
 
 .contact-text .t1 {
+  text-align: start;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
@@ -386,6 +388,7 @@ header {
 }
 
 .contact-text h2 {
+  text-align: start;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;

@@ -97,7 +97,7 @@ header {
   align-items: center;
   height: 100vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("/img/img-fondos/wave-haikei.png");
+    url("/img/img-fondos/fondo01.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

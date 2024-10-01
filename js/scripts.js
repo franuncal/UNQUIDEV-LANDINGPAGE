@@ -1,14 +1,26 @@
 // Menu Hamburguesa
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
+document.addEventListener("DOMContentLoaded", function () {
+  const abrirMenu = document.getElementById("abrir");
+  const cerrarMenu = document.getElementById("cerrar");
+  const nav = document.getElementById("nav");
+  const navLinks = document.querySelectorAll(".nav-list li a");
 
-abrir.addEventListener("click", () => {
-  nav.classList.add("visible");
-});
+  // Función para abrir el menú
+  abrirMenu.addEventListener("click", () => {
+    nav.classList.add("visible");
+  });
 
-cerrar.addEventListener("click", () => {
-  nav.classList.remove("visible");
+  // Función para cerrar el menú
+  cerrarMenu.addEventListener("click", () => {
+    nav.classList.remove("visible");
+  });
+
+  // Cerrar el menú cuando se haga clic en cualquier enlace del menú
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("visible");
+    });
+  });
 });
 
 // Scroll
@@ -31,4 +43,3 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
-

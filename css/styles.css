@@ -53,12 +53,13 @@ header {
   background-color: rgba(0, 0, 0, 0.9);
   transition: background 0.3s ease;
   z-index: 1000;
+  /* max-width: 1200px; */
+  margin: 0 auto;
 }
 
 .logo {
   max-width: 4rem;
   border-radius: 50%;
-  /* margin-right: 1rem; */
 }
 
 .nav-list {
@@ -122,7 +123,7 @@ header {
   margin: 0 0 20px;
 }
 
-.banner p {
+.banner h2 {
   font-family: "akatab", sans-serif;
   text-align: left; /* Alinea el párrafo a la izquierda */
   font-size: 2.2rem;
@@ -179,6 +180,66 @@ header {
   font-size: 1.5rem;
   color: #fff;
   line-height: 1.6;
+}
+
+/* Servicios */
+.servicios {
+  background-color: #000;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.servicios-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.servicios-modo {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.servicios-modo:hover {
+  transform: translateY(-5px);
+}
+
+.service-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.service-text p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-container {
+  margin-top: 1rem;
+}
+
+.cta-button {
+  background-color: #cef196;
+  color: #110f10;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b1ee4e;
 }
 
 /* Funcionalidades Section */
@@ -271,7 +332,7 @@ header {
 }
 
 .contacto .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -373,16 +434,18 @@ header {
   }
 
   .abrir-menu {
+    font-size: 2.5rem;
     color: #ececec;
   }
 
   .cerrar-menu {
+    font-size: 2.5rem;
     color: #ececec;
   }
 
   header {
-    position: fixed;
-    padding: 0.7rem 2rem;
+    position: absolute;
+    padding: 1.5rem 2rem;
     gap: 6rem;
   }
 
@@ -391,16 +454,24 @@ header {
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end; /* Centrar los items en el centro horizontalmente */
+    justify-content: start; /* Centrar los items verticalmente */
     gap: 1rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    bottom: 1;
-    padding: 2rem;
-    background-color: #110f10;
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    padding: 2rem 0;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Un color de fondo más oscuro para que cubra el contenido */
+    backdrop-filter: blur(2px); /* Efecto de desenfoque detrás */
+    box-shadow: none; /* Quitar el shadow para evitar el borde lateral */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   .nav.visible {
@@ -414,19 +485,38 @@ header {
   }
 
   .nav-list li a {
+    font-size: 1.5rem;
     color: #f5f1f0;
   }
 
-  .banner h1 {
-    font-size: 2.5rem;
+  /* Banner */
+  .banner {
+    justify-content: center;
+    padding: 0 10px;
+    height: calc(100vh - 60px);
+    background-size: contain;
+    background-position: bottom center;
+    margin-top: 0;
   }
 
-  .banner p {
+  .banner-content {
+    max-width: 100%;
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  .banner h1 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+  }
+
+  .banner h2 {
     font-size: 1.5rem;
+    margin: 0 0 10px;
   }
 
   .cta-button {
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 10px 20px;
   }
 

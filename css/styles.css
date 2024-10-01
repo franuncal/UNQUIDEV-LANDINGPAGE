@@ -45,6 +45,7 @@ header {
   font-family: "akatab", sans-serif;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -53,8 +54,6 @@ header {
   background-color: rgba(0, 0, 0, 0.9);
   transition: background 0.3s ease;
   z-index: 1000;
-  /* max-width: 1200px; */
-  margin: 0 auto;
 }
 
 .logo {
@@ -96,7 +95,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.1),
@@ -199,7 +198,7 @@ header {
 }
 
 .servicios-modo {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
   padding: 2rem;
   border-radius: 12px;
@@ -213,14 +212,14 @@ header {
   transform: translateY(-5px);
 }
 
-.service-text h3 {
+.servicios-text h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.service-text p {
-  font-size: 1.5rem;
+.servicios-text p {
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -246,7 +245,6 @@ header {
 .features-section {
   padding: 4rem 2rem;
   background-color: #000;
-  /* background-color: #f9f9f9; */
   display: flex;
   justify-content: center;
 }
@@ -271,15 +269,11 @@ header {
   justify-content: space-between;
   margin-bottom: 4rem;
   gap: 3rem;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .feature-row.reverse {
   flex-direction: row-reverse;
-}
-
-.feature-row:hover {
-  transform: translateY(-10px);
 }
 
 /* Feature Image */
@@ -292,13 +286,6 @@ header {
   width: 100%;
   height: auto;
   border-radius: 18px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Feature Text */
@@ -419,11 +406,12 @@ header {
   color: #b1ee4e; /* Color de hover */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
     width: 100%;
     padding: 0 10px;
   }
+
   .abrir-menu,
   .cerrar-menu {
     display: block;
@@ -439,39 +427,48 @@ header {
   }
 
   .cerrar-menu {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #ececec;
-  }
-
-  header {
     position: absolute;
-    padding: 1.5rem 2rem;
-    gap: 6rem;
+    top: 2rem;
+    right: 2rem;
   }
 
+  /* Header */
+  header {
+    background-color: #000;
+    padding: 0.7rem 2rem;
+    height: 100px; /* Mantén la altura del header */
+    position: fixed; /* Mantén el header fijo en la parte superior */
+    width: 100%; /* Asegúrate de que el header ocupe todo el ancho */
+    z-index: 10; /* Asegúrate de que esté por encima del banner */
+  }
+
+  /* Navbar */
   .nav {
     opacity: 0;
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Centrar los items en el centro horizontalmente */
-    justify-content: start; /* Centrar los items verticalmente */
+    align-items: center;
+    justify-content: center; /* Centrar los items verticalmente */
     gap: 1rem;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%; /* Ocupa el 100% del ancho de la pantalla */
-    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
     padding: 2rem 0;
     background-color: rgba(
       0,
       0,
       0,
-      0.5
+      0.95
     ); /* Un color de fondo más oscuro para que cubra el contenido */
-    backdrop-filter: blur(2px); /* Efecto de desenfoque detrás */
+    /* backdrop-filter: blur(2px);  */
     box-shadow: none; /* Quitar el shadow para evitar el borde lateral */
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 5; /* Asegúrate de que esté por debajo del header */
   }
 
   .nav.visible {
@@ -481,22 +478,32 @@ header {
 
   .nav .nav-list {
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+    padding: 0;
   }
 
   .nav-list li a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #f5f1f0;
+  }
+
+  .social-icons-nav {
+    font-size: 1.5rem;
   }
 
   /* Banner */
   .banner {
     justify-content: center;
     padding: 0 10px;
-    height: calc(100vh - 60px);
+    margin-top: 70px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("/img/img-unqui/fondo01.png");
     background-size: contain;
-    background-position: bottom center;
-    margin-top: 0;
+    background-position: top;
   }
 
   .banner-content {
@@ -522,87 +529,68 @@ header {
 
   /* Seccion Nosotros */
   .nosotros .container {
-    flex-direction: column; /* Coloca el texto e imagen en columnas */
-    height: auto; /* Ajusta la altura automáticamente */
-    gap: 20px; /* Reduce el espacio entre elementos */
-  }
-
-  .nosotros .image {
-    display: none; /* Oculta la imagen en pantallas pequeñas */
-  }
-
-  .nosotros .vm-text {
-    display: none; /* Oculta el texto con la clase vm-text en pantallas pequeñas */
+    padding: 20px; /* Ajusta el padding para pantallas más pequeñas */
   }
 
   .nosotros .text h2 {
-    font-size: 24px; /* Ajusta el tamaño del título */
+    font-size: 3rem; /* Reduce el tamaño del título */
+    text-align: center; /* Centra el título en pantallas más pequeñas */
   }
 
   .nosotros .text p {
-    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-size: 1.2rem; /* Reduce el tamaño del párrafo */
+    text-align: center; /* Centra el párrafo en pantallas más pequeñas */
   }
 
   /* Servicios */
-  .service-card {
-    flex-direction: column; /* Coloca la imagen debajo del texto */
-    gap: 1rem; /* Reduce el espacio entre elementos */
-    padding: 1.5rem; /* Reduce el padding en pantallas más pequeñas */
+  .servicios-container {
+    flex-direction: column; /* Asegura que las tarjetas estén en columna */
+    align-items: center; /* Centra las tarjetas en la pantalla */
   }
 
-  .service-text {
-    padding-right: 0; /* Quita el padding lateral */
-    text-align: center; /* Centra el texto */
+  .servicios-modo {
+    width: 100%; /* Hace que cada tarjeta ocupe el ancho completo */
+    max-width: 400px; /* Limita el ancho máximo de las tarjetas */
   }
 
-  .service-text h2 {
-    font-size: 1.8rem; /* Ajusta el tamaño del título */
+  .servicios-text h3 {
+    font-size: 1.8rem; /* Ajusta el tamaño del título para pantallas más pequeñas */
   }
 
-  .service-text p {
-    font-size: 1rem; /* Reduce el tamaño del texto */
-    padding: 0.75rem; /* Reduce el padding del párrafo */
-  }
-
-  .service-image {
-    max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  .servicios-text p {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
   }
 
   .cta-button {
-    font-size: 1.2rem; /* Ajusta el tamaño del botón de llamada a la acción */
+    font-size: 1rem; /* Ajusta el tamaño del botón para pantallas más pequeñas */
   }
 
   /* Seccion Funcionalidades */
-  .features-section {
-    padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
+  .feature-row.reverse {
+    flex-direction: column; /* Apilar verticalmente en pantallas pequeñas */
+    align-items: flex-start; /* Alinear a la izquierda */
   }
 
-  .features-container h2 {
-    font-size: 2rem; /* Reduce el tamaño del título */
-    margin-bottom: 20px; /* Reduce el espacio debajo del título */
+  .feature-row {
+    flex-direction: column; /* Asegurar que todas las filas se apilen verticalmente */
   }
 
-  .features-grid {
-    flex-direction: column; /* Organiza las características en columna */
-    gap: 20px; /* Reduce el espacio entre los elementos */
+  .feature-image {
+    max-width: 100%; /* Asegurarse de que la imagen ocupe el 100% del ancho */
+    flex: none;
   }
 
-  .feature-box {
-    width: 100%; /* Asegura que las cajas ocupen el 100% del ancho disponible */
-    padding: 20px; /* Reduce el padding dentro de las cajas */
+  .feature-text {
+    max-width: 100%; /* Asegurarse de que el texto ocupe el 100% del ancho */
+    padding: 1rem; /* Ajustar padding */
   }
 
-  .feature-box h3 {
-    font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+  .feature-text h3 {
+    font-size: 1.8rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
   }
 
-  .feature-box p {
-    font-size: 0.9rem; /* Ajusta el tamaño del texto */
-  }
-
-  .feature-icon {
-    font-size: 2.5rem; /* Ajusta el tamaño del ícono */
-    margin-bottom: 15px; /* Reduce el espacio debajo del ícono */
+  .feature-text p {
+    font-size: 1.2rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
   }
 
   /* seccion Contacto */

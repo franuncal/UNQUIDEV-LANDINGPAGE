@@ -280,12 +280,15 @@ header {
 .feature-image {
   flex: 1;
   max-width: 50%;
+  overflow: hidden;
 }
 
 .feature-image img {
   width: 100%;
   height: auto;
   border-radius: 18px;
+  transform: scale(1.4);
+  object-fit: cover;
 }
 
 /* Feature Text */
@@ -513,7 +516,7 @@ header {
   }
 
   .banner h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin: 0 0 10px;
   }
 
@@ -576,8 +579,17 @@ header {
   }
 
   .feature-image {
-    max-width: 100%; /* Asegurarse de que la imagen ocupe el 100% del ancho */
+    max-width: 100%;
     flex: none;
+    overflow: hidden;
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    transform: scale(1.8); /* Aplica un zoom adaptado para móviles */
+    object-fit: cover;
   }
 
   .feature-text {

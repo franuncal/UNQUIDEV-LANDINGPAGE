@@ -93,13 +93,13 @@ header {
 /* Banner Inicio */
 .banner {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
     ),
     url("/img/img-unqui/fondo01.png");
   background-position: center;
@@ -107,37 +107,42 @@ header {
   background-size: cover;
   background-color: #000;
   color: white;
-  text-align: center;
   padding: 0 20px;
 }
 
 .banner-content {
   max-width: 900px;
   padding: 20px;
+  text-align: left; /* Asegura que el contenido del banner esté alineado a la izquierda */
 }
 
 .banner h1 {
-  text-align: start;
+  text-align: left; /* Alinea el título a la izquierda */
   font-size: 5rem;
   margin: 0 0 20px;
 }
 
 .banner p {
   font-family: "akatab", sans-serif;
-  text-align: start;
+  text-align: left; /* Alinea el párrafo a la izquierda */
   font-size: 2.2rem;
   margin: 0 0 20px;
 }
 
+.cta-container {
+  text-align: center; /* Alinea el botón al centro */
+  margin-top: 2rem;
+}
+
 .cta-button {
+  text-align: center;
   display: inline-block;
   padding: 15px 30px;
-  margin-top: 2rem;
-  background-color: #cef196; /* Color del botón */
+  background-color: #cef196;
   color: #110f10;
   text-decoration: none;
   font-family: "akatab", sans-serif;
-  font-size: 10rem;
+  font-size: 3rem;
   font-weight: 500;
   border-radius: 7px;
   transition: background-color 0.3s, transform 0.3s;
@@ -151,9 +156,8 @@ header {
 /* Nosotros */
 .nosotros {
   transition: background-color 0.3s ease;
-  /* background-color: #f9f9f9; */
   background-color: #000;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
 .nosotros .container {
@@ -166,18 +170,17 @@ header {
 }
 
 .nosotros .text h2 {
-  color: #333;
+  color: #f9f9f9;
   font-size: 5rem;
   margin-bottom: 20px;
 }
 
 .nosotros .text p {
   font-size: 1.5rem;
-  color: #555;
+  color: #fff;
   line-height: 1.6;
 }
 
-/* Servicios Section */
 /* Servicios Section */
 .services-section {
   background-color: #110f10;
@@ -197,7 +200,7 @@ header {
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .service-card:hover {
@@ -259,13 +262,14 @@ header {
 /* Funcionalidades Section */
 .features-section {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #000;
+  /* background-color: #f9f9f9; */
   display: flex;
   justify-content: center;
 }
 
 .features-container {
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
 }
 
@@ -329,25 +333,8 @@ header {
 
 .feature-text p {
   font-size: 1.5rem;
-  color: #555;
+  color: #fff;
   line-height: 1.6;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  .feature-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .feature-row.reverse {
-    flex-direction: column;
-  }
-
-  .feature-text,
-  .feature-image {
-    max-width: 100%;
-  }
 }
 
 /* contacto */
@@ -356,8 +343,9 @@ header {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
-  background-color: #110f10;
+  background-color: #000;
   padding: 80px 20px;
+  border-top: 1px solid #cef196;
 }
 
 .contacto .container {

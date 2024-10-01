@@ -588,7 +588,7 @@ header {
     width: 100%;
     height: auto;
     border-radius: 18px;
-    transform: scale(1.8); /* Aplica un zoom adaptado para móviles */
+    transform: scale(1.6); /* Aplica un zoom adaptado para móviles */
     object-fit: cover;
   }
 

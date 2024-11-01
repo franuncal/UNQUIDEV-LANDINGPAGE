@@ -1,29 +1,25 @@
-// Menu Hamburguesa
-document.addEventListener("DOMContentLoaded", function () {
-  const abrirMenu = document.getElementById("abrir");
-  const cerrarMenu = document.getElementById("cerrar");
-  const nav = document.getElementById("nav");
-  const navLinks = document.querySelectorAll(".nav-list li a");
+const abrirBtn = document.getElementById("abrir");
+const cerrarBtn = document.getElementById("cerrar");
+const nav = document.getElementById("nav");
+const navLinks = document.querySelectorAll(".nav-list a"); // Selecciona todos los enlaces del menú
 
-  // Función para abrir el menú
-  abrirMenu.addEventListener("click", () => {
-    nav.classList.add("visible");
-  });
+abrirBtn.addEventListener("click", () => {
+  nav.classList.toggle("active"); // Alterna la clase active al abrir
+});
 
-  // Función para cerrar el menú
-  cerrarMenu.addEventListener("click", () => {
-    nav.classList.remove("visible");
-  });
+// Cerrar el menú al hacer clic en el botón de cerrar
+cerrarBtn.addEventListener("click", () => {
+  nav.classList.remove("active"); // Oculta el menú al cerrar
+});
 
-  // Cerrar el menú cuando se haga clic en cualquier enlace del menú
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("visible");
-    });
+// Cerrar el menú al hacer clic en cualquier enlace
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active"); // Oculta el menú al seleccionar un enlace
   });
 });
 
-// Scroll
+// Scroll Animado
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(
@@ -36,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 1.0 }
+    { threshold: 0.5 }
   );
 
   sections.forEach((section) => {
